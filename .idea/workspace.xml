@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc517fe-6496-44a3-b194-b2d18f2a2933" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/UcH.iml" afterDir="false" />
@@ -8,40 +11,36 @@
       <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/online-shop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/activate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/activate.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/activate.fish" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/activate.nu" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/activate.ps1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/activate_this.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/deactivate.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/pip-3.10.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/pip.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/pip3.10.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/pip3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/pydoc.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/python.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/pythonw.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/wheel-3.10.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/wheel.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/wheel3.10.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/wheel3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/pyvenv.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/templates/catalog/contacts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/templates/catalog/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/pip-3.10.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/pip.exe" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/pip.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/pip3.10.exe" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/pip3.10.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/pip3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/pip3.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
@@ -54,11 +53,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.settings.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\UcH\online-shop\catalog\templates\catalog" />
+      <recent name="D:\UcH\online-shop" />
+      <recent name="D:\UcH\online-shop\catalog\templates" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
