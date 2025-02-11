@@ -2,10 +2,14 @@
 
 from django.shortcuts import render
 from .forms import ContactForm
+from .models import Product
+from django.http import Http404
 
 
 def home(request):
-    return render(request, 'catalog/home.html')
+    product = Product.objects.all()
+    context = {'products': product}
+    return render(request, 'catalog/home.html', context)
 
 
 def contact(request):
@@ -27,3 +31,18 @@ def contact(request):
         form = ContactForm()
 
     return render(request, 'catalog/contacts.html', {'form': form, 'success_message': success_message})
+
+
+def index(request):
+    try:
+        # Измените 'pk=1' в соответствии с вашими критериями запроса
+        product = Product.objects.get(id=6)
+        c = product.description.split('-')
+        context = {'name': product.name, 'category': product.category, "purchase_price": product.purchase_price,
+                    'description': c, 'image': product.image}
+        example = {'product': product, 'split': product.description.split('-') }
+        print(product)
+    except Product.DoesNotExist:
+        raise Http404("Продукт не существует")
+    return render(request, r'catalog/index.html', example)
+

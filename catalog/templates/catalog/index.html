@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <h1>Информация о продукте {{product.name}}</h1>
+    <p> <img src="{{ product.image.url }}" alt="классная фоточка"></p>
+    <p>{{product.category}}</p>
+    {% for words in split %}
+    <li> {{ words }}</li>
+    {% endfor %}
+    <p>Стоимость {{product.purchase_price}} деняк</p>
+</body>
+</html>
