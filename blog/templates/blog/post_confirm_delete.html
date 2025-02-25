@@ -1,0 +1,33 @@
+`html
+<!DOCTYPE html>
+<html lang="en">
+{% include 'blog/head.html' %}
+<body>
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+   <h5class="my-0 mr-md-auto font-weight-normal">Blog</h5>
+   <nav class="ms-5">
+       <a class="p-2 btn btn-outline-primary" href="/">Главная</a>
+       <a class="p-2 btn btn-outline-primary" href="/contact/">Контакты</a>
+   </nav>
+</div>
+
+{% block content1 %}
+<div class="container">
+    <h2 class="mt-5">Удаление поста</h2>
+    <p>Вы уверены, что хотите удалить "{{ post.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Да, удалить</button>
+        <a href="{% url 'post_detail' post.pk %}" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include 'blog/footer.html' %}
+{% endblock %}
+
+<!-- Подключите статичеcкие файлы со скриптами Bootstrap -->
+</body>
+</html>
