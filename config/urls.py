@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('catalog.urls')),  # Это позволит рендерить home.html по корневому URL
     path('catalog/', include('catalog.urls')),
     path('admin/', admin.site.urls),
+    path('blog/', include('blog.urls'))
 
 ]
 
