@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Category, Product
 # Register your models here.
 
+
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (id, 'name')
@@ -13,6 +14,3 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = (id, 'name', 'purchase_price', 'category')
     search_fields = ('category',)
     list_filter = ('name', 'description',)
-
-
-

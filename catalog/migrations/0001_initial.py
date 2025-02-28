@@ -15,9 +15,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
-                ('description', models.TextField(help_text='Описание категории')),
+                ('description',
+                 models.TextField(help_text='Описание категории')),
             ],
             options={
                 'verbose_name': 'категория',
@@ -28,14 +33,20 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Product',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
                 ('description', models.TextField(help_text='Описание товара')),
-                ('image', models.ImageField(upload_to='photos/', verbose_name='Фотография')),
-                ('purchase_price', models.FloatField(help_text='Введите цену за товар')),
+                ('image', models.ImageField(
+                    upload_to='photos/', verbose_name='Фотография')),
+                ('purchase_price',
+                 models.FloatField(help_text='Введите цену за товар')),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now_add=True)),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='products', to='catalog.category')),
+                ('category', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    related_name='products', to='catalog.category')),
             ],
             options={
                 'verbose_name': 'продукт',
