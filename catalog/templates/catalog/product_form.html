@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'catalog/head.html' %}
+<body>
+<h1>{% if form.instance.pk %}Редактировать продукт{% else %}Создать продукт{% endif %}</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Сохранить</button>
+</form>
+<a href="{% url 'product_list' %}">Назад</a>
+
+{% include 'catalog/footer.html' %}
+</body>
+</html>
