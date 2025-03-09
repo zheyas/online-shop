@@ -22,8 +22,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='photos/', verbose_name='Фотография')
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='products')
-    purchase_price = models.FloatField(
-        help_text='Введите цену за товар')
+    purchase_price = models.DecimalField(max_digits=10, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'catalog/head.html' %}
+
+<h1>Список продуктов</h1>
+<a href="{% url 'product_create' %}">Добавить продукт</a>
+<ul>
+    {% for product in products %}
+        <li>
+            {{ product.name }} - {{ product.purchase_price }} руб.
+            <a href="{% url 'product_update' product.pk %}">Редактировать</a>
+            <a href="{% url 'product_delete' product.pk %}">Удалить</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% include 'catalog/footer.html' %}
