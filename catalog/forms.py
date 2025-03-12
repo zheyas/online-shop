@@ -3,6 +3,8 @@ from django import forms
 from .models import Product
 
 FORBIDDEN_WORDS = settings.FORBIDDEN_WORDS
+
+
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
@@ -17,13 +19,13 @@ class ProductForm(forms.ModelForm):
             })
 
     def clean_name(self):
-        name = self.cleaned_data["name"].lower()
+        name = self.cleaned_data.get("name", "").lower()
         if any(word in name for word in FORBIDDEN_WORDS):
             raise forms.ValidationError("Название содержит запрещенные слова.")
         return self.cleaned_data["name"]
 
     def clean_description(self):
-        description = self.cleaned_data["description"].lower()
+        description = self.cleaned_data.get("description", "").lower()
         if any(word in description for word in FORBIDDEN_WORDS):
             raise forms.ValidationError("Описание содержит запрещенные слова.")
         return self.cleaned_data["description"]
