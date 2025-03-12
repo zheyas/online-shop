@@ -1,9 +1,8 @@
-
+from django.conf import settings
 from django import forms
 from .models import Product
 
-FORBIDDEN_WORDS = {"казино", "криптовалюта", "крипта", "биржа", "дешево", "бесплатно", "обман", "полиция", "радар"}
-
+FORBIDDEN_WORDS = settings.FORBIDDEN_WORDS
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
