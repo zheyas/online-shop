@@ -1,6 +1,8 @@
+# forms.py
 from django.conf import settings
 from django import forms
 from .models import Product
+from .validators import price_validator
 
 FORBIDDEN_WORDS = settings.FORBIDDEN_WORDS
 
@@ -30,11 +32,12 @@ class ProductForm(forms.ModelForm):
             raise forms.ValidationError("Описание содержит запрещенные слова.")
         return self.cleaned_data["description"]
 
-    def clean_purchase_price(self):
-        purchase_price = self.cleaned_data.get("purchase_price")
-        if purchase_price is not None and purchase_price < 0:
-            raise forms.ValidationError("Цена не может быть отрицательной.")
-        return purchase_price
+    # Удаляем метод clean_purchase_price и добавляем валидатор на уровне поля
+    purchase_price = forms.IntegerField(
+        validators=[price_validator],
+        label='Цена покупки'
+    )
+
 
 class ContactForm(forms.Form):
     name = forms.CharField(
