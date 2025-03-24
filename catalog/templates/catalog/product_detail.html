@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'catalog/head.html' %}
+<body>
+    <h1>{{ product.name }}</h1>
+    <p>{{ product.description }}</p>
+    <p>Цена: {{ product.purchase_price }}</p>
+    <p>Владелец: {{ product.owner.username }}</p>
+
+    <a href="{% url 'product_list' %}">Вернуться к списку продуктов</a>
+
+    {% include 'catalog/footer.html' %}
+</body>
+</html>

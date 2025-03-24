@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'catalog/head.html' %}
+<body>
+    <h1>Продукты в категории "{{ category.name }}"</h1>
+    <ul>
+        {% for product in products %}
+            <li>
+                {{ product.name }} - {{ product.description }}
+                <br>
+                Цена: {{ product.purchase_price }}
+                <br>
+                Владелец: {{ product.owner.username }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'home' %}">Вернуться на главную</a>
+    {% include 'catalog/footer.html' %}
+</body>
+</html>
