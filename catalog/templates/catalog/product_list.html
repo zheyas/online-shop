@@ -1,3 +1,4 @@
+ <!-- catalog/product_list.html -->
 <!DOCTYPE html>
 <html lang="en">
 {% include 'catalog/head.html' %}
@@ -6,11 +7,17 @@
 <a href="{% url 'product_create' %}">Добавить продукт</a>
 <ul>
     {% for product in products %}
-        <li>
-            {{ product.name }} - {{ product.purchase_price }} руб.
-            <a href="{% url 'product_update' product.pk %}">Редактировать</a>
-            <a href="{% url 'product_delete' product.pk %}">Удалить</a>
-        </li>
+       <li>
+                {{ product.name }} - {{ product.purchase_price }} руб.
+                Владелец: {{ product.owner.username }}
+
+                {% if user == product.owner %}
+                    <a href="{% url 'product_update' product.pk %}">Редактировать</a>
+                    <a href="{% url 'product_delete' product.pk %}">Удалить</a>
+                {% elif perms.catalog.can_unpublish_product or perms.catalog.delete_product %}
+                    <a href="{% url 'product_delete' product.pk %}">Удалить (как модератор)</a>
+                {% endif %}
+            </li>
     {% endfor %}
 </ul>
 
