@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserRegistrationForm, UserProfileForm
 from .models import CustomUser
+from django.views.generic import UpdateView
 
 class CustomLoginView(LoginView):
     template_name = 'users/login.html'
